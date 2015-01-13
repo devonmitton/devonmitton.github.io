@@ -17,6 +17,7 @@ h1 {
 
 h2 {
   font-size: 14pt;
+  text-transform: uppercase;
 }
 
 a {
@@ -39,10 +40,10 @@ p, ul {
   width: 320px;
   margin: 0 auto;
   color: #979692;
+  text-align: center;
 }
 
 .me {
-  text-align: center;
   padding: 30px 0;
   border-bottom: 1px solid #979692;
 }
@@ -76,6 +77,8 @@ p, ul {
 
 .todo-list {
   padding: 30px 0;
+  display: inline-block;
+  text-align: left;
 }
 
 .todo-list ul {
@@ -89,7 +92,8 @@ p, ul {
 }
 
 .todo-list li:before {
-  content: '◻︎';
+  content: '☐';
+  margin-right: 5px;
 }
 
 .todo-list li.completed {
