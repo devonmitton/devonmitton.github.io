@@ -5,12 +5,46 @@ html, body {
   padding: 0;
 }
 
-.me {
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 18pt;
+}
+
+h2 {
+  font-size: 14pt;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p, ul {
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container {
   width: 320px;
   margin: 0 auto;
-  text-align: center;
   color: #979692;
-  padding-top: 30px;
+}
+
+.me {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #979692;
 }
 
 .me .portrait {
@@ -28,35 +62,8 @@ html, body {
   display: block;
 }
 
-.me h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  /*text-transform: uppercase;*/
-  font-size: 18pt;
-  line-height: 1.2;
-}
-
-.me h1 strong {
-  font-weight: bold;
-}
-
 .me h1 span {
   display: block;
-}
-
-.me p {
-  margin: 0 0 10px 0;
-  line-height: 1.4;
-  font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.me a {
-  text-decoration: none;
-}
-
-.me a:hover, .me a:focus {
-  text-decoration: underline;
 }
 
 .me .work {
@@ -65,4 +72,30 @@ html, body {
 
 .me .twitter {
   color: #28aae1;
+}
+
+.todo-list {
+  padding: 30px 0;
+}
+
+.todo-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  line-height: 1.5;
+}
+
+.todo-list li:before {
+  content: '◻︎';
+}
+
+.todo-list li.completed {
+  text-decoration: line-through;
+}
+
+.todo-list li.completed:before {
+  content: '☑︎';
 }
