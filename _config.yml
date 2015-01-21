@@ -1,0 +1,9 @@
+name:           Devon Mitton
+description:    User Experience Designer
+url:            http://devonmitton.com
+
+encoding:       UTF-8
+destination:    _build
+permalink:      pretty
+
+exclude:        ["README.md"]

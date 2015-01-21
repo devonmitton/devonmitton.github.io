@@ -1,0 +1,105 @@
+html, body {
+  background: #f8f7f2;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 18pt;
+}
+
+h2 {
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p, ul {
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  color: #979692;
+  text-align: center;
+}
+
+.me {
+  padding: 30px 0;
+  border-bottom: 1px solid #979692;
+}
+
+.me .portrait {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+  display: inline-block;
+}
+
+.me img {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 137px;
+  height: 137px;
+  display: block;
+}
+
+.me h1 span {
+  display: block;
+}
+
+.me .work {
+  color: #dc291e;
+}
+
+.me .twitter {
+  color: #28aae1;
+}
+
+.todo-list {
+  padding: 30px 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.todo-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  line-height: 1.5;
+}
+
+.todo-list li:before {
+  content: '☐';
+  margin-right: 5px;
+}
+
+.todo-list li.completed {
+  text-decoration: line-through;
+}
+
+.todo-list li.completed:before {
+  content: '☑︎';
+}
