@@ -18,8 +18,10 @@ html {
 body {
   margin: 0;
   background: #f8f7f2;
-  font-size: 20px;
   color: #979692;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* HTML5 display definitions
@@ -53,12 +55,15 @@ template {
 a {
   background-color: transparent;
   text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dotted;
+  border-bottom-color: inherit;
 }
 
 a:active,
 a:hover {
   outline: 0;
-  text-decoration: underline;
+  border-bottom-style: solid;
 }
 
 /* Text-level semantics
@@ -242,8 +247,6 @@ h4         { font-size: 1em; }
 p, ul, ol {
   margin: 1em 0;
   line-height: 1.4;
-  font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
 }
 
@@ -373,18 +376,46 @@ p, ul, ol {
   color: #fff;
 }
 
-.page-block :first-child {
-  margin-top: 0;
+.ux-designer {
+  background-color:  #334d5c;
+  color:             #d2e8f5;
+  
+  background-image:    url(img/background.quadrille.png),
+                       url(img/background.boxes-and-arrows.svg),
+                       url(img/background.wireframe.svg);
+  
+  background-position: top 0 left -20%,
+                       bottom 30px right 30px,
+                       top 150px left 30px;
+  
+  background-repeat:   repeat,
+                       no-repeat,
+                       no-repeat;
+  
+  background-size:     auto,
+                       250px 160px,
+                       200px 300px;
 }
 
-.page-block a {
-  border-color: #fff;
-}
-
-.ux-designer    { background-color: #334d5c; color: #d2e8f5; } /* Dark Blue */
 .ux-designer a:hover, .ux-designer a:active { background-color: #d2e8f5; color: #334d5c; }
 
-.husband-father { background-color: #45b29d; } /* Aqua */
+.husband-father {
+  background-color: #45b29d;
+  color:            #d4f9f2;
+  
+  background-image:    url(img/background.flower.svg),
+                       url(img/background.minecraft.svg);
+  
+  background-position: top 10px right 30px,
+                       bottom 0px left 10%;
+  
+  background-repeat:   no-repeat,
+                       no-repeat;
+  
+  background-size:     200px 280px,
+                       400px 200px;
+}
+
 .husband-father a:hover, .husband-father a:active { background-color: #fff; color: #45b29d; }
 
 .workplace .container h2 {
@@ -407,9 +438,66 @@ p, ul, ol {
   background: rgba(255, 255, 255, 0.95);
 }
 
-.project h4 {
-  padding: 0.25em 0;
-  border-bottom: 1px solid #888;
+.project header {
+  height: 150px;
+  outline: 1px dotted red;
+  margin: -30px -30px 30px;
+  position: relative;
+  background: #888;
+}
+
+.project header h1 {
+  margin: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.project h2 {
+  text-align: left;
+}
+
+.project.cabelas header { background-color: #5D6B0F; background-image: url(img/background.cabelas-header.jpg); background-size: cover; }
+.project.cargill header { background-color: #638C1C; }
+.project.ecampus header { background-color: #FDB813; }
+
+
+.stat {
+  margin: 0 auto;
+  position: relative;
+}
+
+.cabelas .stat { color: #5D6B0F; width: 275px; }
+.cargill .stat { color: #638C1C; width: 230px; }
+.ecampus .stat { color: #FDB813; }
+
+.stat span {
+  display: block;
+  line-height: 1em;
+}
+.stat .number {
+  font-weight: 400;
+  font-size: 4em;
+  letter-spacing: -0.075em;
+}
+.stat .delta {
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  letter-spacing: -0.025em;
+}
+.stat .details {
+  text-transform: uppercase;
+  font-size: .75em;
+  width: 140px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  letter-spacing: 0.015em;
 }
 
 /* Media Queries
