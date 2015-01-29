@@ -541,6 +541,10 @@ ul, ol {
 
 }
 
+@media screen and (max-width: 430px) {
+  .page-block   { padding: 50px 25px; }
+}
+
 @media screen and (max-width: 400px) {
   
   body { font-size: 15px; }
@@ -548,7 +552,6 @@ ul, ol {
 
   p, ul, ol { font-weight: 400; }
 
-  .page-block   { padding: 50px 25px; }
   .whimsy.right { right: -10px; }
   .whimsy.left  {  left: -10px;}
 
@@ -577,12 +580,10 @@ ul, ol {
     margin-left: 0;
   }
   
-  .service      { width: 60px; }
-  .service span { width: 60px; }
-  .service img {
-    width: 60px;
-    height: 60px;
-  }
+  .service,
+  .service span,
+  .service img  { width: 60px; }
+  .service img  { height: 60px; }
 
   .stat { width: 220px;}
 
