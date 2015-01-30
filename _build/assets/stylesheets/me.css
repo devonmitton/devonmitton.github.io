@@ -552,6 +552,7 @@ ul, ol {
 
   p, ul, ol { font-weight: 400; }
 
+  .page-block   { padding: 30px 20px; }
   .whimsy.right { right: -10px; }
   .whimsy.left  {  left: -10px;}
 
@@ -571,7 +572,6 @@ ul, ol {
   body { font-size: 14px; }
   h1 { font-size: 1.7em; }
   
-  .page-block   { padding: 30px 20px; }
   .whimsy.right { right: 10px; }
   .whimsy.left  {  left: 10px;}
 
