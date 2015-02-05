@@ -248,12 +248,21 @@ td, th {
 /* Typography
    ========================================================================== */
 
-h1, h2, h3, h4 { font-family: 'Lato', sans-serif; line-height: 1em; }
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1em; }
 
 h1         { font-weight: 300; font-size: 2em; margin: 0.67em 0; }
 h2         { font-size: 1.2em; text-transform: uppercase; }
-h3         { font-size: 1.1em; font-weight: 300; font-style: italic; }
+h3         { font-size: 1.1em; font-weight: 300; opacity: 0.6;}
 h4         { font-size: 1em; }
+
+hgroup {
+  margin: 0.67em 0;
+}
+
+hgroup h1, hgroup h2, hgroup h3,
+hgroup h4, hgroup h5, hgroup h6 {
+  margin: 0.1em 0;
+}
 
 p, ul, ol {
   margin: 1em 0;
@@ -279,6 +288,8 @@ ul, ol {
   margin: 0 auto;}
   .container h1, .container h2 {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
     position: relative;}
 
 .me {
@@ -295,8 +306,19 @@ ul, ol {
     width: 137px;
     height: 137px;
     display: block;}
-  .me h1 span {
-    display: block;}
+  .me .homepage-heading {
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-size: 1.25em;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1;}
+    .me .homepage-heading strong {
+      font-family: "Montserrat";
+      font-size: 2em;
+      letter-spacing: -0.025em;}
+    .me .homepage-heading span, .me .homepage-heading strong {
+      display: block;}
 
 .work-link {
   color: #dc291e;}
@@ -306,7 +328,7 @@ ul, ol {
 .pnav {
   text-align: center;
   font-size: 80%;
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   text-transform: uppercase;
   padding: .7em 0;}
   .pnav-items {

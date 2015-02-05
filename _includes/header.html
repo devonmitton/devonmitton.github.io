@@ -21,7 +21,7 @@
         {% if page.slug != "home" %}{% include navigation.html %}{% endif %}
         <article class="me">
             <div class="portrait"><a href="/" title="home"><img src="/assets/images/devonmitton.svg" alt="Devon Mitton Portrait" width="137px" height="137" /></a></div>
-            {% if page.heading %}<h1>{{page.heading}}</h1>{% endif %}
+            {% if page.heading %}<h1{% if page.slug == "home" %} class="homepage-heading"{% endif %}>{{page.heading}}</h1>{% endif %}
             {% if page.intro %}<p class="intro">{{page.intro}}</p>{% endif %}
         </article>
     </div>
