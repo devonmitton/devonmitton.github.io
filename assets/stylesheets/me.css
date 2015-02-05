@@ -248,7 +248,7 @@ td, th {
 /* Typography
    ========================================================================== */
 
-h1, h2, h3, h4 { font-family: 'Lato', sans-serif; line-height: 1em; }
+h1, h2, h3, h4 { font-family: 'Raleway', sans-serif; line-height: 1em; }
 
 h1         { font-weight: 300; font-size: 2em; margin: 0.67em 0; }
 h2         { font-size: 1.2em; text-transform: uppercase; }
@@ -308,7 +308,7 @@ ul, ol {
 .pnav {
   text-align: center;
   font-size: 80%;
-  font-family: 'Lato';
+  font-family: 'Raleway';
   text-transform: uppercase;
   padding: .7em 0;}
   .pnav-items {
