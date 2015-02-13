@@ -279,53 +279,6 @@ ul, ol {
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 
-/* Animation Keyframes
-   ========================================================================== */
-@-webkit-keyframes pop-in-with-delay {
-    0% { -webkit-transform: scale(0); }
-   80% { -webkit-transform: scale(0); }
-   90% { -webkit-transform: scale(1.1); }
-   95% { -webkit-transform: scale(0.9); }
-   98% { -webkit-transform: scale(1.05); }
-  100% { -webkit-transform: scale(1); }
-}
-
-@-webkit-keyframes slide-down {
-    0% { -webkit-transform: translateY(-60px); }
-   60% { -webkit-transform: translateY(-60px); }
-  100% { -webkit-transform: translateY(0px); }
-}
-
-@-moz-keyframes pop-in-with-delay {
-    0% { -moz-transform: scale(0); }
-   80% { -moz-transform: scale(0); }
-   90% { -moz-transform: scale(1.1); }
-   95% { -moz-transform: scale(0.9); }
-   98% { -moz-transform: scale(1.05); }
-  100% { -moz-transform: scale(1); }
-}
-
-@-moz-keyframes slide-down {
-    0% { -moz-transform: translateY(-60px); }
-   60% { -moz-transform: translateY(-60px); }
-  100% { -moz-transform: translateY(0px); }
-}
-
-@keyframes pop-in-with-delay {
-    0% { transform: scale(0); }
-   80% { transform: scale(0); }
-   90% { transform: scale(1.1); }
-   95% { transform: scale(0.9); }
-   98% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes slide-down {
-    0% { transform: translateY(-60px); }
-   60% { transform: translateY(-60px); }
-  100% { transform: translateY(0px); }
-}
-
 
 /* Layout
    ========================================================================== */
@@ -365,15 +318,6 @@ ul, ol {
       letter-spacing: -0.025em;}
     .me .homepage-heading span, .me .homepage-heading strong {
       display: block;}
-
-.home .me .portrait {
-  -webkit-animation: pop-in-with-delay 1.5s ease-out;
-     -moz-animation: pop-in-with-delay 1.5s ease-out;
-          animation: pop-in-with-delay 1.5s ease-out;}
-.home .me .homepage-heading {
-  -webkit-animation: slide-down 1.75s ease;
-     -moz-animation: slide-down 1.75s ease;
-          animation: slide-sown 1.75s ease;}
 
 .work-link {
   color: #dc291e;}
@@ -592,6 +536,107 @@ ul, ol {
   width: 100%;
   height: 100%;
 }
+
+
+
+/* Animation Keyframes
+   ========================================================================== */
+
+/* Pop In */
+@-webkit-keyframes pop-in {
+    0% { -webkit-transform: scale(0); }
+   50% { -webkit-transform: scale(1.1); }
+   75% { -webkit-transform: scale(0.9); }
+   95% { -webkit-transform: scale(1.05); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes pop-in {
+    0% { -moz-transform: scale(0); }
+   50% { -moz-transform: scale(1.1); }
+   75% { -moz-transform: scale(0.9); }
+   95% { -moz-transform: scale(1.05); }
+  100% { -moz-transform: scale(1); }
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); }
+   50% { transform: scale(1.1); }
+   75% { transform: scale(0.9); }
+   95% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Slide Down */
+@-webkit-keyframes slide-up {
+    0% { -webkit-transform: translateY(60px); }
+  100% { -webkit-transform: translateY(0px); }
+}
+
+@-moz-keyframes slide-up {
+    0% { -moz-transform: translateY(60px); }
+  100% { -moz-transform: translateY(0px); }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(60px); }
+  100% { transform: translateY(0px); }
+}
+
+
+@-webkit-keyframes fade-in {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fade-in {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animations
+   ========================================================================== */
+.home .portrait {
+  -webkit-animation: slide-up 0.5s 0.8s ease backwards;
+     -moz-animation: slide-up 0.5s 0.8s ease backwards;
+          animation: slide-up 0.5s 0.8s ease backwards;
+}
+
+.home .homepage-heading {
+  -webkit-animation: fade-in 0.5s 1s ease backwards;
+     -moz-animation: fade-in 0.5s 1s ease backwards;
+          animation: fade-in 0.5s 1s ease backwards;}
+
+.home .more-info {
+  -webkit-animation: fade-in 0.5s 1.25s ease backwards;
+     -moz-animation: fade-in 0.5s 1.25s ease backwards;
+          animation: fade-in 0.5s 1.25s ease backwards;}
+
+.home .about-me-link, .home .my-work-link, .home .thoughts-link {
+  -webkit-animation: pop-in 0.3s ease-out backwards;
+     -moz-animation: pop-in 0.3s ease-out backwards;
+          animation: pop-in 0.3s ease-out backwards;
+}
+
+.home .about-me-link {
+  -webkit-animation-delay: 1.35s;
+     -moz-animation-delay: 1.35s;
+          animation-delay: 1.35s;}
+
+.home .my-work-link {
+  -webkit-animation-delay: 1.45s;
+     -moz-animation-delay: 1.45s;
+          animation-delay: 1.45s;}
+
+.home .thoughts-link {
+  -webkit-animation-delay: 1.55s;
+     -moz-animation-delay: 1.55s;
+          animation-delay: 1.55s;}
 
 
 
