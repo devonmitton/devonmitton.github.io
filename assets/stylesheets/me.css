@@ -279,6 +279,53 @@ ul, ol {
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 
+/* Animation Keyframes
+   ========================================================================== */
+@-webkit-keyframes pop-in-with-delay {
+    0% { -webkit-transform: scale(0); }
+   80% { -webkit-transform: scale(0); }
+   90% { -webkit-transform: scale(1.1); }
+   95% { -webkit-transform: scale(0.9); }
+   98% { -webkit-transform: scale(1.05); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes slide-down {
+    0% { -webkit-transform: translateY(-60px); }
+   60% { -webkit-transform: translateY(-60px); }
+  100% { -webkit-transform: translateY(0px); }
+}
+
+@-moz-keyframes pop-in-with-delay {
+    0% { -moz-transform: scale(0); }
+   80% { -moz-transform: scale(0); }
+   90% { -moz-transform: scale(1.1); }
+   95% { -moz-transform: scale(0.9); }
+   98% { -moz-transform: scale(1.05); }
+  100% { -moz-transform: scale(1); }
+}
+
+@-moz-keyframes slide-down {
+    0% { -moz-transform: translateY(-60px); }
+   60% { -moz-transform: translateY(-60px); }
+  100% { -moz-transform: translateY(0px); }
+}
+
+@keyframes pop-in-with-delay {
+    0% { transform: scale(0); }
+   80% { transform: scale(0); }
+   90% { transform: scale(1.1); }
+   95% { transform: scale(0.9); }
+   98% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(-60px); }
+   60% { transform: translateY(-60px); }
+  100% { transform: translateY(0px); }
+}
+
 
 /* Layout
    ========================================================================== */
@@ -289,8 +336,7 @@ ul, ol {
   .container h1, .container h2 {
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: -0.025em;
-    position: relative;}
+    letter-spacing: -0.025em;}
 
 .me {
   padding: 30px;
@@ -320,6 +366,15 @@ ul, ol {
     .me .homepage-heading span, .me .homepage-heading strong {
       display: block;}
 
+.home .me .portrait {
+  -webkit-animation: pop-in-with-delay 1.5s ease-out;
+     -moz-animation: pop-in-with-delay 1.5s ease-out;
+          animation: pop-in-with-delay 1.5s ease-out;}
+.home .me .homepage-heading {
+  -webkit-animation: slide-down 1.75s ease;
+     -moz-animation: slide-down 1.75s ease;
+          animation: slide-sown 1.75s ease;}
+
 .work-link {
   color: #dc291e;}
 .twitter-link {
@@ -327,7 +382,7 @@ ul, ol {
 
 .pnav {
   text-align: center;
-  font-size: 80%;
+  font-size: .65em;
   font-family: 'Montserrat';
   text-transform: uppercase;
   padding: .7em 0;}
@@ -342,17 +397,15 @@ ul, ol {
       .pnav-link {
         color: inherit;
         text-decoration: none;
-        padding: .5em 1em;
+        padding: 1em 2em;
         border: 1px solid #979692;
         font-weight: bold;
         transition: background-color 200ms, color 200ms;}
         .pnav-link:hover, .active-item .pnav-link {
-          text-decoration: none;
-          color: #f8f7f2;
-          background-color: #979692;}
-    .active-item .about-me-link { background-color: #334d5c; border-color: #334d5c; }
-    .active-item .my-work-link  { background-color: #df5a49; border-color: #df5a49; }
-    .active-item .thoughts-link { background-color: #efc94c; border-color: #efc94c; color: #555; }
+          text-decoration: none;}
+    .active-item .about-me-link, .about-me-link:hover { background-color: #334d5c; border-color: #334d5c; color: #fff; }
+    .active-item .my-work-link, .my-work-link:hover   { background-color: #df5a49; border-color: #df5a49; color: #fff; }
+    .active-item .thoughts-link, .thoughts-link:hover { background-color: #efc94c; border-color: #efc94c; color: #555; }
 
 .whimsy {
   font-family: 'Covered By Your Grace';
@@ -540,8 +593,11 @@ ul, ol {
   height: 100%;
 }
 
+
+
+
 /* Media Queries
-*/
+   ========================================================================== */
 @media screen and (max-width: 600px) {
 
   body { font-size: 16px; }
