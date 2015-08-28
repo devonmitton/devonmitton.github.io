@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://devonmitton.com/</loc>
-    <lastmod>2015-02-13T13:25:50-06:00</lastmod>
+    <lastmod>2015-08-28T12:36:45-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -10,7 +10,7 @@
   
   <url>
     <loc>http://devonmitton.com/does/</loc>
-    <lastmod>2015-02-13T13:25:50-06:00</lastmod>
+    <lastmod>2015-08-28T12:36:45-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21,7 +21,7 @@
   
   <url>
     <loc>http://devonmitton.com/is/</loc>
-    <lastmod>2015-02-13T13:25:50-06:00</lastmod>
+    <lastmod>2015-08-28T12:36:45-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -30,7 +30,7 @@
   
   <url>
     <loc>http://devonmitton.com/thinks/</loc>
-    <lastmod>2015-02-13T13:25:50-06:00</lastmod>
+    <lastmod>2015-08-28T12:36:45-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

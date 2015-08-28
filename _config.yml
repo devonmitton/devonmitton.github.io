@@ -7,3 +7,10 @@ destination:    _build
 permalink:      pretty
 
 exclude:        ["README.md"]
+
+sass:
+  sass_dir:     /assets/stylesheets/_lib
+  style:        compressed
+
+gems:
+  - octopress-autoprefixer

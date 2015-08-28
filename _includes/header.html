@@ -2,15 +2,15 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  
+
   <title>Devon Mitton | {% if page.title %}{{page.title}} | {% endif %}{{site.description}}</title>
-  
+
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <link href="/assets/stylesheets/me.css" media="all" rel="stylesheet" />
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Montserrat:400,700|Covered+By+Your+Grace" rel="stylesheet" />
-  
+
   <script src="/assets/javascripts/lib/modernizr-2-8-3.js"></script>
 
 </head>
@@ -18,11 +18,11 @@
 
 <header class="masthead">
     <div class="container">
-        {% if page.slug != "home" %}{% include navigation.html %}{% endif %}
+        {% include navigation.html %}
+
         <article class="me">
             <div class="portrait"><a href="/" title="home"><img src="/assets/images/devonmitton.svg" alt="Devon Mitton Portrait" width="137px" height="137" /></a></div>
-            {% if page.heading %}<h1{% if page.slug == "home" %} class="homepage-heading"{% endif %}>{{page.heading}}</h1>{% endif %}
-            {% if page.intro %}<p class="intro">{{page.intro}}</p>{% endif %}
         </article>
+        
     </div>
 </header>
