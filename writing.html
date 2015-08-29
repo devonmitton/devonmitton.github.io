@@ -1,0 +1,32 @@
+---
+layout: default
+title: Writing
+---
+
+{% if site.posts.size > 0 %}
+  <section class="page-block thoughts writing">
+    <div class="container">
+      <h2>Writing</h2>
+
+      <section class="posts">
+        {% for post in site.posts %}
+
+          <article class="post">
+            <header class="post-header">
+              <h1 class="post-title"><a href="{{ post.url }}#post">{{ post.title }}</a></h1>
+              <p class="post-meta">Published on {{ post.date | date: "%A, %B %e, %Y" }}.</p>
+            </header>
+
+            {{ post.excerpt }}
+
+            <footer class="post-footer clearfix">
+              <p><a href="{{ post.url }}#post" class="post-link">Keep reading</a></p>
+            </footer>
+          </article>
+
+        {% endfor %}
+      </section>
+
+    </div>
+  </section>
+{% endif %}

@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  background: #f8f7f2;
+  background: $main-bg-color;
   color: #979692;
   font-size: 16px;
   font-weight: 300;
@@ -183,17 +183,4 @@ svg:not(:root) {
 //
 // optgroup {
 //   font-weight: bold;
-// }
-
-
-// Tables
-// ========================================================================== //
-//
-// table {
-//   border-collapse: collapse;
-//   border-spacing: 0;
-// }
-//
-// td, th {
-//   padding: 0;
 // }

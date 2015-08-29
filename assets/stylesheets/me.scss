@@ -1,13 +1,17 @@
 ---
 ---
 
-@import "normalize";
-@import "typography";
-
-// Colors
+// Colors and Imports
 // ========================================================================== //
+$main-bg-color: #f8f7f2;
 $ct-red: #dc291e;
 $twitter-blue: #28aae1;
+
+$code-font-family: 'Source Code Pro', 'Monaco', 'Courier New', monospace;
+
+@import "normalize";
+@import "typography";
+@import "tables";
 
 
 // Utilities
@@ -15,10 +19,16 @@ $twitter-blue: #28aae1;
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 // Layout
 // ========================================================================== //
-
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -29,12 +39,13 @@ $twitter-blue: #28aae1;
 }
 
 .me {
-  padding: 30px;
+  padding: 30px 0;
   text-align: center;
+  margin: 0 auto -80px auto;
 
   .portrait {
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 5px solid #fff;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
     display: inline-block;
   }
@@ -42,60 +53,64 @@ $twitter-blue: #28aae1;
   img {
     border-radius: 50%;
     margin: 0 auto;
-    width: 137px;
-    height: 137px;
+    width: 90px;
+    height: 90px;
     display: block;
   }
 }
 
+.home .me {
+  margin: 0 auto;
+  img {
+    width: 130px;
+    height: 130px;
+  }
+}
 
-// Navigation
-// ========================================================================== //
+.errorpage .me {
+  margin: 0 auto;
+}
 
-.pnav {
+.baseplate {
+  font-family: "Source Sans Pro";
+  font-size: 11px;
   text-align: center;
-  font-size: 0.75em;
-  font-family: 'Montserrat';
-  text-transform: uppercase;
-  padding: .7em 0;
-}
-
-.pnav-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.pnav-item, .pnav-link {
-  display: inline-block;
-}
-
-.pnav-item {
-  margin: 0px .25em;
-}
-
-.pnav-link {
-  color: inherit;
-  text-decoration: none;
-  padding: 1em 2em;
-  border: 1px solid #979692;
-  font-weight: bold;
-  transition: background-color 200ms, color 200ms;
-}
-
-.pnav-link:hover, .active-item .pnav-link {
-  text-decoration: none;
-}
-
-.active-item {
-  .about-me-link, .about-me-link:hover { background-color: #334d5c; border-color: #334d5c; color: #fff; }
-  .my-work-link, .my-work-link:hover   { background-color: #df5a49; border-color: #df5a49; color: #fff; }
-  .thoughts-link, .thoughts-link:hover { background-color: #efc94c; border-color: #efc94c; color: #555; }
+  padding: 30px 0;
 }
 
 
 // Pages
 // ========================================================================== //
+// .whimsy {
+//   font-family: 'Covered By Your Grace';
+//   margin-top: 2em;
+//   margin-bottom: 2em;
+//   position: relative;
+//   top: -10px;
+//
+//   &.left, &.right{
+//     max-width: 50%;
+//   }
+//
+//   .whimsy.left {
+//     margin-right: 50%;
+//     left: -30px;
+//     transform: rotate(8deg);
+//   }
+//
+//   .whimsy.right {
+//     margin-left: 50%;
+//     text-align: right;
+//     right: -30px;
+//     transform: rotate(-8deg);
+//   }
+// }
+
+.page-block {
+  padding: 100px 50px;
+  background: #aaa;
+  color: #fff;
+}
 
 // Homepage
 // -------------------------------------------------------------------------- //
@@ -120,216 +135,70 @@ $twitter-blue: #28aae1;
 .work-link    { color: $ct-red; }
 .twitter-link { color: $twitter-blue; }
 
-
-// About Me
-// -------------------------------------------------------------------------- //
-
-.whimsy {
-  font-family: 'Covered By Your Grace';
-  margin-top: 2em;
-  margin-bottom: 2em;
-  position: relative;
-  top: -10px;
-
-  &.left, &.right{
-    max-width: 50%;
-  }
-
-  .whimsy.left {
-    margin-right: 50%;
-    left: -30px;
-    transform: rotate(8deg);
-  }
-
-  .whimsy.right {
-    margin-left: 50%;
-    text-align: right;
-    right: -30px;
-    transform: rotate(-8deg);
-  }
-}
-
-.page-block {
-  padding: 100px 50px;
-  background: #aaa;
-  color: #fff;}
-
-.ux-designer {
-  background-color:    #334d5c;
-  color:               #d2e8f5;
-  background-image:    url(img/background.quadrille.png),
-                       url(img/background.boxes-and-arrows.svg),
-                       url(img/background.wireframe.svg);
-  background-position: top 0 left -20%,
-                       bottom 30px right 30px,
-                       top 150px left 30px;
-  background-repeat:   repeat,
-                       no-repeat,
-                       no-repeat;
-  background-size:     auto,
-                       250px 160px,
-                       200px 300px;}
-  .ux-designer a:hover,
-  .ux-designer a:active {
-    background-color: #d2e8f5;
-    color: #334d5c;}
-
-.husband-father {
-  background-color:    #45b29d;
-  color:               #d4f9f2;
-  background-image:    url(img/background.minecraft.svg),
-                       url(img/background.flower.svg);
-  background-position: bottom 0px left 10%,
-                       top 10px right 30px;
-  background-repeat:   no-repeat,
-                       no-repeat;
-  background-size:     400px 200px,
-                       200px 280px;}
-  .husband-father a:hover,
-  .husband-father a:active {
-    background-color: #fff;
-    color: #45b29d;}
-
-// My Work
-// -------------------------------------------------------------------------- //
-.workplace .container h2 {
-  text-align: left;
-}
-
-.canadian-tire {
-  background-color: #dc291e;
-}
-
-.think-shift {
-  background-color: #ee5544;
-}
-
-.projects, .writing {
-  background-color: #f8f7f2;
-  color: #979692;
-}
-
-.project {
-  color: #444;
-  padding: 30px;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.95);
-
-  header {
-    height: 170px;
-    margin: -30px -30px 30px;
-    padding: 30px;
-    position: relative;
-    background: #888;
-    background-size: cover;
-    background-position: right center;
-    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
-
-    h1 {
-      margin: 0;
-      color: #fff;
-      font-size: 1.75em;
-      text-align: left;
-      letter-spacing: 0.05em;
-    }
-
-    .photo-credit {
-      font-size: 0.6em;
-      font-weight: normal;
-      letter-spacing: 0.05em;
-      color: #fff;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      margin: 5px;
-    }
-  }
-
-  h2 {
-    text-align: left;
-  }
-
-  &.cabelas header { background-color: #5D6B0F; background-image: url(img/background.cabelas-header.jpg); }
-  &.cargill header { background-color: #638C1C; background-image: url(img/background.cargill-header.jpg); }
-  &.ecampus header { background-color: #FDB813; background-image: url(img/background.ecampus-header.jpg); }
-}
-
-.stat {
-  position: relative;
-  color: #fff;
-  width: 230px;
-
-  .stat span {
-    display: block;
-    line-height: 1em;
-  }
-
-  .number {
-    font-weight: 400;
-    font-size: 4em;
-    letter-spacing: -0.075em;
-    width: 80px;
-  }
-
-  .delta {
-    font-weight: bold;
-    font-size: 1.5em;
-    position: absolute;
-    top: 10px;
-    left: 80px;
-    letter-spacing: -0.025em;
-  }
-
-  .details {
-    text-transform: uppercase;
-    font-size: .75em;
-    width: 140px;
-    height: 30px;
-    position: absolute;
-    left: 80px;
-    top: 2.5em;
-    letter-spacing: 0.015em;
-  }
-}
-
-.services {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.service {
-  display: inline-block;
-  margin: 0 .25em;
-  width: 80px;
-  height: 110px;
-
-  img {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-  }
-
-  span {
-    display: block;
-    font-size: .65em;
-    font-weight: normal;
-    line-height: 20px;
-    height: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
 // Thoughts
 // -------------------------------------------------------------------------- //
 
+.writing {
+  background-color: desaturate( darken($main-bg-color, 10%), 10% );
+  color: #555;
+
+  .posts {
+    padding: 30px 0;
+  }
+
+  blockquote {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 0.875em;
+    border-left: 2px solid #ccc;
+    margin: 0;
+    padding: 0.5em 2em;
+    background: #f2f2f2;
+  }
+
+  .post {
+    padding: 20px;
+    background: #fafafa;
+    color: #888;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    font-family: 'Source Sans Pro';
+  }
+
+  .post-header, .post-footer {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .post-header {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+  }
+
+  .post-footer {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    margin-top: 30px;
+  }
+
+  .post-title {
+    margin: 10px 0;
+    font-family: 'Merriweather';
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  .post-meta {
+    margin: 10px 0;
+    font-family: 'Source Sans Pro';
+    font-size: 0.75em;
+  }
+
+  .post-link {
+    font-family: 'Source Sans Pro';
+  }
+}
+
 .speaking {
-  background: #efc94c;
+  background-color: desaturate( darken($main-bg-color, 20%), 20% );
   color: #555;
 }
 
@@ -340,7 +209,6 @@ $twitter-blue: #28aae1;
   height: 0;
 }
 
-
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -350,73 +218,20 @@ $twitter-blue: #28aae1;
 }
 
 
-
-// Animation Keyframes
-// ========================================================================== //
-
-@keyframes pop-in {
-    0% { transform: scale(0); }
-   50% { transform: scale(1.1); }
-   75% { transform: scale(0.9); }
-   95% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes fade-in {
-    0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-
-// Animations
-// ========================================================================== //
-.home {
-  .portrait {
-    animation: fade-in 0.5s 0.25s ease backwards;
-  }
-
-  .homepage-heading {
-    animation: fade-in 0.5s 0.35s ease backwards;
-  }
-
-  .more-info {
-    animation: fade-in 0.5s 0.45s ease backwards;
-  }
-
-  .about-me-link, .my-work-link, .thoughts-link {
-    animation: pop-in 0.3s ease-out backwards;
-  }
-
-  .about-me-link { animation-delay: 0.5s; }
-  .my-work-link  { animation-delay: 0.6s; }
-  .thoughts-link { animation-delay: 0.7s; }
-}
-
-
-
 // Media Queries
 // ========================================================================== //
 @media screen and (max-width: 600px) {
 
   .page-block { padding: 75px 40px; }
 
-  .stat          {
-    .number  { width: 70px; letter-spacing: 0; }
-    .delta   {  left: 70px; }
-    .details {  left: 70px; top: 35px;  }
-  }
-
-  .husband-father {
-    background-position: bottom  10px left   10px,
-                         bottom -40px right 100px;
-    background-size:     300px 150px,
-                         150px 210px;
-  }
-
 }
 
-@media screen and (max-width: 430px) {
-  .page-block { padding: 50px 25px; }
+@media screen and (max-width: 480px) {
+
+  .page-block       { padding: 50px 25px; }
+  .homepage-heading { font-size: 1.5em; }
+  .writing .posts   { margin-left: -16px; margin-right: -16px; }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -424,43 +239,10 @@ $twitter-blue: #28aae1;
   body      { font-size: 14px; }
   p, ul, ol { font-weight: 400; }
 
-  .homepage-heading { font-size: 1.5em; }
-
-  .page-block    { padding: 30px 20px; }
-  .whimsy.right  { right: -10px; }
-  .whimsy.left   {  left: -10px;}
-  .stat .details { font-weight: normal; }
-
-  .husband-father {
-    background-position: bottom 10px left  10px,
-                         bottom 23px left 115px;
-    background-size:     200px 100px,
-                         70px 110px;
-  }
+  .page-block       { padding: 30px 20px; }
+  .me img           { width: 90px; height: 90px; }
 
 }
 
-@media screen and (max-width: 350px) {
 
-
-
-  .whimsy.right { right: 10px; }
-  .whimsy.left  {  left: 10px; }
-
-  .project {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .pnav-link {
-    padding: 1em 1.5em;
-  }
-
-  .service,
-  .service span,
-  .service img  { width: 60px; }
-  .service img  { height: 60px; }
-
-  .stat { width: 220px;}
-
-}
+@import "syntax";

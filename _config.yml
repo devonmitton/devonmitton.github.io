@@ -1,16 +1,28 @@
-name:           Devon Mitton
-description:    User Experience Designer
-url:            http://devonmitton.com
+name:              Devon Mitton
+description:       User Experience Designer
+url:               http://devonmitton.com
 
-encoding:       UTF-8
-destination:    _build
-permalink:      pretty
+encoding:          UTF-8
+destination:       _build
+permalink:         pretty
 
-exclude:        ["README.md"]
+include:           [".htaccess"]
+exclude:           ["README.md"]
+
+excerpt_separator: "<!-- more -->"
 
 sass:
-  sass_dir:     /assets/stylesheets/_lib
-  style:        compressed
+  sass_dir:        /assets/stylesheets/_lib
+  style:           compressed
 
 gems:
   - octopress-autoprefixer
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/writing/:categories/:year/:month/:day/:title.html"

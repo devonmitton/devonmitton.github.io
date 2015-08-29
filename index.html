@@ -1,10 +1,64 @@
 ---
-layout:  home
+layout:  default
 slug:    home
 ---
-<h1 class="homepage-heading">
-  <span>Hello. My name is</span>
-  <strong>Devon Mitton</strong>
-  <span>I'm a User Experience Designer.</span>
-</h1>
-<p class="more-info text-center">I work at <a href="http://corp.canadiantire.com" class="work-link" title="Canadian Tire" target="_blank">Canadian Tire</a>. Sometimes I <a href="http://twitter.com/devonmitton" class="twitter-link" title="My Twitter Stream" target="_blank">Tweet</a>.</p>
+
+{% if site.posts.size > 0 %}
+  <section class="page-block thoughts writing">
+    <div class="container">
+      <h2><a href="/writing/">Writing</a></h2>
+      <section class="posts">
+        {% for post in site.posts limit:1 %}
+
+          <article class="post">
+            <header class="post-header">
+              <h1 class="post-title"><a href="{{ post.url }}#post">{{ post.title }}</a></h1>
+              <p class="post-meta">Published on {{ post.date | date: "%A, %B %e, %Y" }}.</p>
+            </header>
+
+            {{ post.excerpt }}
+
+            <footer class="post-footer clearfix">
+              <p><a href="{{ post.url }}#post" class="post-link">Keep reading</a></p>
+            </footer>
+          </article>
+
+        {% endfor %}
+      </section>
+
+      {% if site.posts.size > 1 %}
+        <h3>Some more stuff I've written:</h3>
+        <ul>
+          {% for post in site.posts limit:5 offset:1 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+          {% if site.posts.size > 6 %}
+            <li><a href="">See all posts</a></li>
+          {% endif %}
+        </ul>
+      {% endif %}
+
+    </div>
+  </section>
+{% endif %}
+
+<section class="page-block thoughts speaking">
+  <div class="container">
+    <h2>Speaking</h2>
+    <p>I've always been drawn to teaching. The only problem: I was terrified of public speaking.</p>
+    <p>In 2014 while working at <a href="http://thinkshiftinc.com" target="_blank">Think Shift</a>, I decided to get over my fear and start giving talks on Design and User Experience. Since then I have spoken at several &ldquo;Lunch and Learns&rdquo;, both to staff and clients, as well as spoken a few times at <a href="http://www.rrc.mb.ca/" target="_blank">Red River College</a> to the Graphic Design classes.</p>
+    <p class="whimsy text-center">Enjoy!</p>
+
+    <h3>Design for Use</h3>
+    <p>The following is a video of a Lunch and Learn hosted at Think Shift all about how design is far more than just how it looks.</p>
+    <div class="video-wrapper">
+      <iframe title="Think Shift Talk on Design for Use" src="//player.vimeo.com/video/117738910" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <h3>Manifesto</h3>
+    <p>The following is a video of a Pecha Kucha talk in Winnipeg all about Manifesto, and what makes them so powerful.</p>
+    <div class="video-wrapper">
+      <iframe title="Winnipeg Pecha Kucha Talk on Manifesto" src="//player.vimeo.com/video/122578450" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
