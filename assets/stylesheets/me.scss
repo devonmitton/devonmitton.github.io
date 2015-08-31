@@ -135,68 +135,84 @@ $code-font-family: 'Source Code Pro', 'Monaco', 'Courier New', monospace;
 .work-link    { color: $ct-red; }
 .twitter-link { color: $twitter-blue; }
 
-// Thoughts
+// Writing
 // -------------------------------------------------------------------------- //
-
 .writing {
   background-color: desaturate( darken($main-bg-color, 10%), 10% );
   color: #555;
-
-  .posts {
-    padding: 30px 0;
-  }
 
   blockquote {
     font-family: 'Merriweather', serif;
     font-style: italic;
     font-size: 0.875em;
     border-left: 2px solid #ccc;
-    margin: 0;
+    margin: 1em 0;
     padding: 0.5em 2em;
     background: #f2f2f2;
   }
 
-  .post {
-    padding: 20px;
-    background: #fafafa;
-    color: #888;
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-    font-family: 'Source Sans Pro';
+  img {
+    max-width: 100%;
+    width: auto;
   }
 
-  .post-header, .post-footer {
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .post-header {
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-    margin-bottom: 30px;
-  }
-
-  .post-footer {
-    border-top: 1px solid rgba(0,0,0,0.15);
-    margin-top: 30px;
-  }
-
-  .post-title {
-    margin: 10px 0;
-    font-family: 'Merriweather';
-    font-weight: bold;
-    text-transform: none;
-  }
-
-  .post-meta {
-    margin: 10px 0;
-    font-family: 'Source Sans Pro';
-    font-size: 0.75em;
-  }
-
-  .post-link {
-    font-family: 'Source Sans Pro';
-  }
 }
 
+.posts {
+  padding: 30px 0;
+}
+
+.post {
+  padding: 20px;
+  background: #fafafa;
+  color: #888;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  font-family: 'Source Sans Pro';
+}
+
+.post-header, .post-footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.post-header {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: 30px;
+}
+
+.post-footer {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-top: 30px;
+}
+
+.post-title {
+  margin: 10px 0;
+  font-family: 'Merriweather';
+  font-weight: bold;
+  text-transform: none;
+}
+
+.post-meta {
+  margin: 10px 0;
+  font-family: 'Source Sans Pro';
+  font-size: 0.75em;
+}
+
+.post-link {
+  font-family: 'Source Sans Pro';
+}
+
+.preamble {
+  font-style: italic;
+  border: 1px solid #eee;
+  background: #fff;
+  padding: 20px;
+  font-size: 0.875em;
+}
+
+
+// Speaking
+// -------------------------------------------------------------------------- //
 .speaking {
   background-color: desaturate( darken($main-bg-color, 20%), 20% );
   color: #555;
