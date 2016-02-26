@@ -9,9 +9,9 @@ $twitter-blue: #28aae1;
 
 $code-font-family: 'Source Code Pro', 'Monaco', 'Courier New', monospace;
 
-@import "normalize";
-@import "typography";
-@import "tables";
+@import "me/normalize";
+@import "me/typography";
+@import "me/tables";
 
 
 // Utilities
@@ -265,4 +265,4 @@ $code-font-family: 'Source Code Pro', 'Monaco', 'Courier New', monospace;
 }
 
 
-@import "syntax";
+// @import "me/syntax";
