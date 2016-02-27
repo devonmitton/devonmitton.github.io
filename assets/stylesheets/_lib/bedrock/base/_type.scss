@@ -14,7 +14,7 @@
 
 $fs-huge:      3.0000rem; // 48
 $fs-xxxxlarge: 2.2500rem; // 36
-$fs-xxxlarge:  1.2500rem; // 30
+$fs-xxxlarge:  1.8750rem; // 30
 $fs-xxlarge:   1.7500rem; // 28
 $fs-xlarge:    1.5000rem; // 24
 $fs-large:     1.1250rem; // 18
@@ -26,15 +26,22 @@ $fs-xxxsmall:  0.6875rem; // 11
 $fs-xxxxsmall: 0.6250rem; // 10
 $fs-tiny:      0.5000rem; //  8
 
+$h1-size: $fs-xxxxlarge!default;
+$h2-size: $fs-xxxlarge !default;
+$h3-size: $fs-xxlarge  !default;
+$h4-size: $fs-xlarge   !default;
+$h5-size: $fs-large    !default;
+$h6-size: $fs-normal   !default;
+
 // Headings
 // -----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 { margin: 0.67rem 0; }
-h1 { font-size: $fs-xxxxlarge; font-weight: 300; }
-h2 { font-size: $fs-xxxlarge; }
-h3 { font-size: $fs-xxlarge; }
-h4 { font-size: $fs-xlarge; }
-h5 { font-size: $fs-large; }
-h6 { font-size: $fs-normal; }
+h1 { font-size: $h1-size; font-weight: 300; }
+h2 { font-size: $h2-size; font-weight: 300; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
 
 
 // Blocks
@@ -85,12 +92,20 @@ sub, sup {
 sup { top: -0.5rem; }
 sub { bottom: -0.25rem; }
 
+blockquote {
+  font-style: italic;
+  opacity: 0.8;
+  margin: 0;
+  padding: 30px;
+}
+
 
 // Helper Classes
 // -----------------------------------------------------------------------------
 .lead { font-size: $fs-xlarge; font-weight: 300; }
 .mute { opacity: 0.6; }
 .caps { text-transform: uppercase; }
+.inflated { letter-spacing: 1px; }
 
 .h1 { @extend h1; }
 .h2 { @extend h2; }
@@ -109,4 +124,12 @@ sub { bottom: -0.25rem; }
 .ls-disc    { list-style: disc; }
 .ls-circle  { list-style: circle; }
 .ls-square  { list-style: square; }
-.ls-none    { list-style: none; }
+.ls-none    { list-style: none; padding: 0; margin-left: 0; }
+
+.invisilink {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    opacity: 0.6;
+  }
+}

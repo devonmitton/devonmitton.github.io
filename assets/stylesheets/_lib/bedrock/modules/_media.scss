@@ -7,23 +7,20 @@
 // =============================================================================
 
 .media {
-  @extend .content;
-
+  @extend .context;
   margin: 0;
 
   .media-item {
     display: block;
-    margin-bottom: 10px;
     position: relative;
+    text-align: center;
+    margin: 0 auto 10px;
+    max-width: 100%;
   }
 
   .media-description {
-    margin-bottom: 10px;
+    @extend .context;
     text-align: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 0.875em;
   }
 
 }

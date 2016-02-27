@@ -12,19 +12,21 @@
 // -----------------------------------------------------------------------------
 
 // Colors
-$brand-primary: #fe57a1;
+$brand-primary: #DE3626;
 $brand-secondary: #333;
 
-$base-serif-family:      serif      !default;
-$base-sans-serif-family: 'Open Sans', sans-serif !default;
-$base-monospace-family:  monospace  !default;
+$body-background-color: #fff;
+
+$base-serif-family:      serif;
+$base-sans-serif-family: 'Open Sans', sans-serif;
+$base-monospace-family:  monospace;
 
 // Base Typography Settings
-$base-font-size:   16px                    !default;
-$base-line-height: 1.5                     !default; // 16 x 1.5 = 24
-$base-font-weight: 300                     !default; // Light, if available
-$base-font-family: $base-sans-serif-family !default;
-$base-font-color:  #333                    !default;
+$base-font-size:   16px;
+$base-line-height: 1.5;  // 16 x 1.5 = 24
+$base-font-weight: 300;  // Light, if available
+$base-font-family: $base-sans-serif-family;
+$base-font-color:  #333;
 
 // Selection stuff;
 $selection-bg-color:   opacify($brand-primary, 0.75) !default; // this could be a brand color;
@@ -47,3 +49,147 @@ $selection-font-color: #fff    !default;
 // Systems
 @import "bedrock/systems/grid";
 @import "bedrock/systems/navigation";
+
+.greetings {
+  text-align: center;
+  background: $brand-primary;
+  padding: 180px 0;
+  color: #fff;
+
+  @media only screen and (max-width: 700px) {
+    padding: 60px 0 140px;
+  }
+}
+
+.me {
+  text-align: center;
+  margin-top: -125px;
+  margin-bottom: 30px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+  }
+}
+
+.introduction {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.professional-links {
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.tray {
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 5px rgba(0,0,0,0.15);
+}
+
+.personal, .working-with-me {
+  padding: 50px 20px;
+  background: #fafafa;
+
+  .grid img {
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+  }
+}
+
+.family-pics {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .column.quarter {
+      width: 50%;
+      float: left;
+      padding: 10px;
+    }
+  }
+}
+
+.professional, .thanks {
+  padding: 50px 20px;
+}
+
+.design-aspects {
+  max-width: 650px;
+  margin: 30px auto;
+  font-size: 90%;
+
+  @media only screen and (max-width: 600px) {
+    .column.fifth {
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
+
+.working-with-me {
+  .h4 {
+    margin: 30px 0;
+  }
+}
+
+.testimony {
+
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+
+  .media-item {
+    padding: 10px;
+    float: left;
+    img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+    span {
+      display: block;
+      font-size: 90%;
+    }
+  }
+
+  .media-description {
+    text-align: left;
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .media-item {
+      float: none;
+    }
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-border {
+  border: 4px solid #fff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.baseplate {
+  font-size: 11px;
+  text-align: center;
+  padding: 30px 0;
+}

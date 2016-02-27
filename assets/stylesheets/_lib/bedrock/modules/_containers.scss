@@ -19,7 +19,7 @@ $container-max-width: 1200px !default;
 .container {
   @extend .content;
   max-width: $container-max-width;
-  padding: 0 40px;
+  padding: 0 20px;
   margin: 0 auto;
 
   &.half {
