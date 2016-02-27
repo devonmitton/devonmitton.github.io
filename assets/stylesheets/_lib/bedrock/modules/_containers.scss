@@ -18,12 +18,7 @@ $container-max-width: 1200px !default;
 
 .container {
   @extend .content;
-  max-width: $container-max-width;
+  max-width: 600px;
   padding: 0 20px;
   margin: 0 auto;
-
-  &.half {
-    max-width: $container-max-width/2;
-    width: auto; // becuase grid uses 'half'
-  }
 }

@@ -50,6 +50,10 @@ $selection-font-color: #fff    !default;
 @import "bedrock/systems/grid";
 @import "bedrock/systems/navigation";
 
+section {
+  padding: 50px 20px;
+}
+
 .greetings {
   text-align: center;
   background: $brand-primary;
@@ -76,7 +80,6 @@ $selection-font-color: #fff    !default;
 
 .introduction {
   text-align: center;
-  padding: 50px 20px;
 }
 
 .professional-links {
@@ -93,7 +96,6 @@ $selection-font-color: #fff    !default;
 }
 
 .personal, .working-with-me {
-  padding: 50px 20px;
   background: #fafafa;
 
   .grid img {
@@ -114,10 +116,6 @@ $selection-font-color: #fff    !default;
       padding: 10px;
     }
   }
-}
-
-.professional, .thanks {
-  padding: 50px 20px;
 }
 
 .design-aspects {
