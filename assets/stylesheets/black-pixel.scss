@@ -12,7 +12,7 @@
 // -----------------------------------------------------------------------------
 
 // Colors
-$brand-primary: #DE3626;
+$brand-primary: #333;
 $brand-secondary: #333;
 
 $body-background-color: #fff;
@@ -50,15 +50,6 @@ $selection-font-color: #fff    !default;
 @import "bedrock/systems/grid";
 @import "bedrock/systems/navigation";
 
-a {
-  color: $brand-primary;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 section {
   padding: 50px 20px;
 
@@ -69,8 +60,9 @@ section {
 
 .greetings {
   text-align: center;
-  background: $brand-primary;
-  padding: 180px 0;
+  background: url(/assets/images/bg.hero.jpg) center center no-repeat $brand-primary;
+  background-size: cover;
+  padding: 150px 0 200px;
   color: #fff;
 
   @media only screen and (max-width: 700px) {
