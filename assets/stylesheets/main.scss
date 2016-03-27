@@ -1,0 +1,83 @@
+---
+---
+// =============================================================================
+// Bedrock - A baseline project template and stuff... Also Flintstones.
+// --------------------------------------------------------------------
+// @version 1.0.0
+// @author  Devon Mitton <devonmitton@gmail.com>
+// =============================================================================
+
+
+// Variables and Junk
+// -----------------------------------------------------------------------------
+
+// Colors
+$brand-primary: #DE3626;
+$brand-secondary: #333;
+
+$body-background-color: #fff;
+$header-background-color: #F9F4ED;
+
+$base-serif-family:      serif;
+$base-sans-serif-family: 'Source Sans Pro', sans-serif;
+$base-monospace-family:  'Source Code Pro', monospace;
+
+// Base Typography Settings
+$base-font-size:   16px;
+$base-line-height: 1.5;  // 16 x 1.5 = 24
+$base-font-weight: 300;  // Light, if available
+$base-font-family: $base-sans-serif-family;
+$base-font-color:  #333;
+
+// Selection stuff;
+$selection-bg-color:   opacify($brand-primary, 0.75) !default; // this could be a brand color;
+$selection-font-color: #fff    !default;
+
+
+// Base Styles
+@import "bedrock/base/html";
+@import "bedrock/base/type";
+@import "bedrock/base/helpers";
+@import "bedrock/base/functions-mixins";
+
+// Modules
+@import "bedrock/modules/tables";
+@import "bedrock/modules/forms";
+@import "bedrock/modules/buttons";
+@import "bedrock/modules/containers";
+@import "bedrock/modules/media";
+
+// Systems
+@import "bedrock/systems/header-footer";
+@import "bedrock/systems/grid";
+@import "bedrock/systems/navigation";
+
+
+// Homepage
+// -------------------------------------------------------------------------- //
+.homepage-heading {
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: $fs-xlarge;
+  margin: 30px 0;
+  opacity: 0.65;
+
+  strong {
+    font-family: "Proxima Nova";
+    font-size: 2em;
+    letter-spacing: -0.025em;
+  }
+
+  span, strong {
+    display: block;
+  }
+}
+
+.why-statement {
+  font-size: $fs-large;
+  margin: 0 auto 50px;
+  max-width: 400px;
+  text-align: center;
+}
