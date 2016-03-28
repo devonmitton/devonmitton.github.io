@@ -12,8 +12,8 @@
 // -----------------------------------------------------------------------------
 
 // Colors
-$brand-primary: #DE3626;
-$brand-secondary: #333;
+$brand-primary: #1b6ac9;
+$brand-secondary: #f5efe6;
 
 $body-background-color: #fff;
 $header-background-color: #F9F4ED;
@@ -27,16 +27,24 @@ $base-font-size:   16px;
 $base-line-height: 1.5;  // 16 x 1.5 = 24
 $base-font-weight: 300;  // Light, if available
 $base-font-family: $base-sans-serif-family;
-$base-font-color:  #333;
+$base-font-color:  rgba(0,0,0,0.65);
 
 // Selection stuff;
 $selection-bg-color:   opacify($brand-primary, 0.75) !default; // this could be a brand color;
 $selection-font-color: #fff    !default;
 
+// Links
+$link-normal-color: $brand-primary;
+$link-visited-color: $brand-primary;
+$link-font-weight: normal;
+
+// Container
+$container-max-width: 600px;
 
 // Base Styles
 @import "bedrock/base/html";
 @import "bedrock/base/type";
+@import "bedrock/base/links";
 @import "bedrock/base/helpers";
 @import "bedrock/base/functions-mixins";
 
@@ -54,63 +62,54 @@ $selection-font-color: #fff    !default;
 @import "bedrock/systems/navigation";
 
 
-// Homepage
+// Basecamp
 // -------------------------------------------------------------------------- //
-.homepage-heading {
-  font-weight: 300;
-  text-transform: none;
-  letter-spacing: 0;
-  line-height: 1.1;
-  font-size: $fs-xlarge;
-  margin: 30px 0;
-  opacity: 0.65;
-
-  strong {
-    font-family: "Proxima Nova";
-    font-size: 2em;
-    letter-spacing: -0.025em;
-  }
-
-  span, strong {
-    display: block;
-  }
-}
-
-.me {
-  text-align: center;
-  margin: 0 auto -80px auto;
-
-  img {
-    border-radius: 50%;
-    margin: 0 auto;
-    width: 90px;
-    height: 90px;
-    display: inline-block;
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
-  }
-}
-
-.home {
-  .me {
-    margin: 0 auto;
-    img {
-      width: 130px;
-      height: 130px;
-    }
-  }
-
+.basecamp {
   .masthead {
     padding: 70px 0;
   }
+
+  h1, h2, h3 {
+    font-family: "Proxima Nova Soft", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+  }
 }
 
-.errorpage .me {
-  margin: 0 auto;
-}
-
-.why-statement {
-  font-size: $fs-large;
-  margin: 0 auto 50px;
-  max-width: 400px;
+.devo-plus-basecamp {
   text-align: center;
+  font-family: "Proxima Nova Soft", sans-serif;
+  vertical-align: middle;
+
+  span {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    top: 15px;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0px 30px;
+  }
+}
+
+.whimsy {
+  font-family: "Proxima Nova Soft", sans-serif;
+  font-weight: bold;
+}
+
+.introduction {
+  font-size: $fs-large;
+}
+
+.philosophy {
+  background: #fafafa;
+}
+
+.design-aspects {
+  width: 650px;
+  margin: 0 auto;
 }

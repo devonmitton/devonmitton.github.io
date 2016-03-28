@@ -76,3 +76,7 @@ img, svg {
 svg:not(:root) {
   overflow: hidden;
 }
+
+figure {
+  margin: 20px 0;
+}

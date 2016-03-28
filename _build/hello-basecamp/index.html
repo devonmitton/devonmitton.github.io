@@ -6,31 +6,38 @@
 
   Hi there! Glad you dropped in to take a look :)
 
-  My guess is that you're looking for some technical details.
+  My guess is that you're looking for some technical details. Before we get into
+  that I want to be transparent: I'm looking for a job and I've applied at a few
+  places before I saw that there were some available positions at Basecamp, and
+  Basecamp is not the only organization for which I've made a site like this.
 
+  It will be trivial for you to review the technical details of my site to find
+  out what I'm about to explain, but I wanted to be in the open regardless :)
 
   The Platform:
   =============
-  It's powered by Jekyll on Github Pages. If you want to peek at the source code
-  for everything, you can see the public repo here:
+  This site is powered by Jekyll on Github Pages. If you want to peek at the
+  source code for everything, you can see the public repo here:
 
   https://github.com/devonmitton/devonmitton.github.io
-
-  You will notice that you are not the only company that I've built a page like
-  this for, so I'll be upfront about the whole thing: I'm looking for a job, and
-  I'm applying at multiple locations.
 
 
   The Styles:
   ===========
   I'm not using Bootstrap or anything for the styles. Instead I'm using my own
-  homebrewed SASS framework which I call "bedrock".
+  homebrewed SASS framework which I call "bedrock", because Minecraft, and well,
+  Flintstones.
 
   https://github.com/devonmitton/bedrock
 
-  It's pretty minimal, and I've refined it over the past three years of using it.
-  It originally started as a rapid prototype SASS framework (like bootstrap) when
-  I was working at Think Shift: https://github.com/wearethinkshift/source
+  It's pretty minimal, and I've refined it over the past three years of using it
+  or some variation of it. While "Bedrock" is young, it's evolved from other projects
+  of a similar nature.
+
+  The evolution began with CSS Resets (Eric Meyers), to Blueprint.css, to a SASS
+  framework I built for a company I was working for to help with rapid prototypes
+  and to become a pattern library for the sites we worked on (inspired by Bootstrap,
+  Blueprint and HTML5BP), to the current version I have now.
 
   Thanks for taking a look around :)
 
@@ -61,9 +68,66 @@
 
 
 </head>
-<body>
+<body class="basecamp">
 
+  <header class="masthead">
+    <div class="container">
+      <figure class="devo-plus-basecamp">
+        <img src="/assets/images/basecamp.svg" alt="Basecamp" class="img-circle img-shadow">
+        <span>+</span>
+        <img src="/assets/images/devonmitton.svg" alt="Devon Mitton" class="img-circle img-shadow">
+      </figure>
 
+      <h1>Hello Basecamp!</h1>
+    </div>
+  </header>
+
+  <main class="context">
+
+    <section class="section-block introduction">
+      <h1>My name is Devon Mitton</h1>
+      <div class="container">
+        <p>I believe that everything in this world can always be better and I&#8217;ve made it my life&#8217;s work to leave the world a bit better than how I found it. So I became a designer.</p>
+        <p class="ta-center whimsy">Sounds lofty, I know. But I'm still going to try.</p>
+        <p><a href="https://m.signalvnoise.com/the-team-the-years-29f984d2f2eb">I hear that you folks are hiring</a>! I&#8217;ve been a big fan of Basecamp (37Signals) for a long time. I&#8217;ve often thought about what it would be like to work for such a great company, in fact I spent a lot of time inspired by you guys to make changes to where I work with some of your ideas.</p>
+        <p>I wanted to give you a good sense of what I value, and what I&#8217;m like to work with in hopes to see if we&#8217;re a good fit. So please consider this page my &ldquo;cover letter&rdquo;.</p>
+      </div>
+    </section>
+
+    <section class="section-block philosophy">
+      <h2>I believe design is more than how it looks</h2>
+      <ul class="design-aspects ls-none grid comfortable ta-center">
+        <li class="column fifth media">
+          <img src="/assets/images/icon.how-it-looks.svg" alt="" class="media-item">
+          <span class="media-description">How it looks</span>
+        </li>
+        <li class="column fifth media">
+          <img src="/assets/images/icon.how-it-works.svg" alt="" class="media-item" data-pin-nopin="true">
+          <span class="media-description">How it works</span>
+        </li>
+        <li class="column fifth media">
+          <img src="/assets/images/icon.how-it-fails.svg" alt="" class="media-item">
+          <span class="media-description">How it fails</span>
+        </li>
+        <li class="column fifth media">
+          <img src="/assets/images/icon.how-it-feels.svg" alt="" class="media-item">
+          <span class="media-description">How it feels</span>
+        </li>
+        <li class="column fifth media">
+          <img src="/assets/images/icon.how-it-affects.svg" alt="" class="media-item">
+          <span class="media-description">How it affects</span>
+        </li>
+    </ul>
+      <div class="container">
+        <p>I began my career as a web (ui) designer, and I quickly learned HTML/CSS and JavaScript. My first job was working with Flash and creating &ldquo;interactive experiences&rdquo; and I discovered that the product is better when &ldquo;how it looks&rdquo; meshes with &ldquo;how it works&rdquo;. I learned that I was able to make better designs when I understood the code behind the scenes. I found the product seemed to mesh better; it wasn&#8217;t clunky or disjointed. It created a &ldquo;how it feels&rdquo;.</p>
+        <p>Since then I&#8217;ve approached design with a holistic view that starts by thinking of the outcomes, and working backwards from there by asking questions like &ldquo;someone uses this thing, then they go on with their day. How do we want them thinking and feeling after they&#8217;ve used it, and how to we go about creating that for them?&rdquo;. Because people often think about Design as &ldquo;how it looks&rdquo;, I&#8217;ve been calling myself a &ldquo;user experience designer&rdquo; to describe my approach.</p>
+        <p>I define a user&#8217;s experience as every point of impression or interaction a person has with an organization, their products or services which impacts how they think and feel about that organization. I don&#8217;t think that&#8217;s the role of a single &ldquo;user experience designer&rdquo;. However, I think that&rsquo;s everyone&rsquo;s job to create delightful interactions with those users and customers. I think everyone is designing something from their eloquence, modularity, and simplicity in code to all the considerations into how people think about and interact with buttons and interfaces, down to well-crafted elements of copy.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="baseplate"></footer>
 
 </body>
 </html>
