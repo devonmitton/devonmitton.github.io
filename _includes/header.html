@@ -18,7 +18,7 @@
   {% include analytics.html %}
 
 </head>
-<body{% if page.slug %} class="{{page.slug}}"{% endif %}>
+<body{% if page.bodyclass %} class="{{page.bodyclass}}"{% endif %}>
 
   <header class="masthead">
     <div class="container">
@@ -28,7 +28,7 @@
           <img src="/assets/images/devonmitton.svg" alt="Devon Mitton | User Experience Designer" width="137px" height="137" />
         </a>
 
-        {% if page.slug == "home" %}
+        {% if page.bodyclass == "home" %}
           <h1 class="homepage-heading">
             <span>Hello, My name is</span>
             <strong>Devon Mitton</strong>
