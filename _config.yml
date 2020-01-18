@@ -1,8 +1,9 @@
 name:              Devon Mitton
-description:       User Experience Designer
+description:       Designer
 url:               http://devonmitton.com
 
 encoding:          UTF-8
+source:            _src
 destination:       _build
 permalink:         pretty
 
@@ -12,7 +13,7 @@ exclude:           ["README.md"]
 excerpt_separator: "<!-- more -->"
 
 sass:
-  sass_dir:        /assets/stylesheets/_lib
+  sass_dir:        /assets/stylesheets/
   style:           compressed
 
 gems:

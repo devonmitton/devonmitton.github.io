@@ -1,5 +1,0 @@
-Redirect 301 /is/ /
-Redirect 301 /does/ /
-Redirect 301 /thinks/ /
-
-ErrorDocument 404 /404.html
