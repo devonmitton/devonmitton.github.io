@@ -1,9 +1,8 @@
 name:              Devon Mitton
 description:       Designer
-url:               http://devonmitton.com
+url:               https://devonmitton.com
 
 encoding:          UTF-8
-source:            _src
 destination:       _build
 permalink:         pretty
 
