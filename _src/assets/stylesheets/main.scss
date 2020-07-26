@@ -3,18 +3,32 @@
 @import 'variables';
 @import 'reboot';
 
+%title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+
+%intro {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
 .page {
-  max-width: 960px;
+  max-width: 720px;
   margin: 0 auto;
   min-height: 100vh;
-  background: #fff;
+  // background: #fff;
   // outline: 1px solid blue;
 
   &__header {
-    padding: 2rem;
-    outline: 1px solid red;
+    padding: 1rem;
     display: flex;
     align-items: center;
+    border-bottom: 4px solid $dark-grey;
 
     .logo {
       margin-right: auto;
@@ -23,13 +37,12 @@
   }
 
   &__content {
-    padding: 2rem;
-    outline: 1px solid red;
+    padding: 2rem 1rem;
   }
 
   &__footer {
-    padding: 2rem;
-    outline: 1px solid red;
+    padding: 1rem;
+    border-top: 4px solid $dark-grey;
   }
 }
 
@@ -44,6 +57,10 @@
       color: rgba(0,0,0,1);
     }
   }
+
+  &__image {
+    width: 40px;
+  }
 }
 
 .nav {
@@ -52,10 +69,18 @@
     display: flex;
     margin: 0;
     padding: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 
   &__item {
-    margin: 0 0.25rem;
+    margin-right: 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -64,25 +89,82 @@
   }
 }
 
-.post {
-  &__header {
-
+.home {
+  &__content {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
   }
 
   &__title {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -3px;
+    @extend %title;
   }
 
   &__intro {
-    font-size: 1.5rem;
-    color: rgba(0,0,0,0.6);
-    letter-spacing: -1px;
+    @extend %intro;
+    color: $text-color--light;
+  }
+}
+
+.section {
+  &__heading {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $text-color--light;
+    // margin-bottom: 1rem;
+  }
+}
+
+.post {
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__meta {
+    color: $text-color--light;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__intro {
+    @extend %intro;
   }
 
   &__content {
     font-size: 1.25rem;
     letter-spacing: -1px;
+
+    p, ol, ul {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.post-list {
+  .post-list__item {
+    border-bottom: 1px solid $medium-grey;
+    padding: 1rem;
+    margin: 0 -1rem;
+    color: inherit;
+    display: block;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.05);
+      text-decoration: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+
+    .post__title {
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 0;
+    }
+
   }
 }

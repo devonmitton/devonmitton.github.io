@@ -16,9 +16,9 @@ sass:
   sass_dir:        /assets/stylesheets/
   style:           compressed
 
-gems:
-  - octopress-autoprefixer
-  - jekyll-contentblocks
+# gems:
+#   - octopress-autoprefixer
+#   - jekyll-contentblocks
 
 defaults:
   -
@@ -29,3 +29,7 @@ defaults:
       layout: "post"
       categories: "writing"
       bodyclass: "single-post"
+
+collections_dir: collections
+collections:
+  - jobs

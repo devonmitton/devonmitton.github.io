@@ -1,0 +1,15 @@
+---
+layout: default
+bodyclass: home
+---
+
+<section class="home__content">
+  {{ content }}
+</section>
+
+{% if site.posts.size > 0 %}
+  <section class="home__writing section">
+    <h2 class="section__heading">Stuff I wrote</h2>
+    {% include post-list.html %}
+  </section>
+{% endif %}

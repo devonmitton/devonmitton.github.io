@@ -1,0 +1,14 @@
+---
+layout: page
+bodyclass: writing
+---
+
+{% if site.posts.size > 0 %}
+
+  {% include post-list.html %}
+
+{% else %}
+
+  <div>Whoops, no posts to show.</div>
+
+{% endif %}
