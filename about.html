@@ -1,0 +1,19 @@
+---
+layout: page
+bodyclass: about
+---
+
+<h1>About</h1>
+<p>Hi there! I'm a designer that loves to work with code and make things.</p>
+<p>I've been a designer for over 15 years having worked at several kinds of companies doing different kinds of work. Along the way I've learned tons of skills and grown my strengths as a designer.</p>
+<p>Currently, I'm the Product Design Manager at <a href="https://boldcommerce.com">Bold Commerce</a>, where we make ecommerce products and solutions for platforms like Shopify, BigCommerce, WooCommerce, CommerceTools and others.</p>
+
+<h2>Timeline</h2>
+<p>Here are a few highlights of my career.</p>
+<ol class="job-list">
+  {% for job in site.jobs %}
+    <li class="job-list__item">
+      {% include job.html job=job %}
+    </li>
+  {% endfor %}
+</ol>

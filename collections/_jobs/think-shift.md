@@ -1,5 +1,6 @@
 ---
-title: Think Shift
+title: The agency
+company: Think Shift
 role: Senior UX Designer
 company_url: https://thinkshiftinc.com
 start_date: 2008

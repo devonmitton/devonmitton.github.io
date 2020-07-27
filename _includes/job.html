@@ -1,0 +1,6 @@
+<div class="job">
+  <h3 class="job__title">{{ include.job.title }}</h3>
+  <div class="job__time">{{ include.job.start_date }} &ndash; {{ include.job.end_date }}</div>
+  <div class="job__role">{{ include.job.role }} @ <a href="{{ include.job.company_url }}">{{ include.job.company }}</a></div>
+  {% comment %}<div class="job__details"></div>{% endcomment %}
+</div>
