@@ -12,7 +12,7 @@ Out of all of the [7 habits of highly effective people](https://www.franklincove
 
 Why is this important?
 
-## You become open
+## You become open to new possibilities
 It begins with openness. You set yourself up to be ready to listen—_actually listen_—to what the other person has to say. You ask clarifying questions, you really try to see the world and their ideas through their eyes.
 
 You test it.
