@@ -1,7 +1,7 @@
 ---
 title: New website
 subtitle: It's been a while.
-tags: Random, Updates
+tags: random, updates
 ---
 
 So, I finally got sick of looking at my 4 year old website and decided it was time to shake things up a bit.
