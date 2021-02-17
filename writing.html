@@ -5,13 +5,15 @@ bodyclass: writing
 
 <div class="writing">
   <h1>Writing</h1>
-{% if site.posts.size > 0 %}
+  <p class="intro">Some articles I wrote.</p>
 
-  {% include post-list.html %}
+  {% if site.posts.size > 0 %}
 
-{% else %}
+    {% include post-list.html %}
 
-  <div>Whoops, no posts to show.</div>
+  {% else %}
 
-{% endif %}
+    <div>Whoops, no posts to show.</div>
+
+  {% endif %}
 </div>
