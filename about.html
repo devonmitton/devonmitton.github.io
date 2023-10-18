@@ -1,11 +1,13 @@
 ---
 layout: page
 bodyclass: about
+career_start: 2005
+manager_start: 2016
 ---
 
 <h1>About</h1>
 <p>Hi there! I'm a designer that loves to work with code and make things.</p>
-<p>I've been a designer for over 15 years having worked at several kinds of companies doing different kinds of work. Along the way I've learned tons of skills and grown my strengths as a designer.</p>
+<p>I've been a designer for over {{ site.time | date: '%Y' | minus: page.career_start }} years and a design manager for over {{ site.time | date: '%Y' | minus: page.manager_start }}. I've worked at several kinds of companies doing different kinds of work. Along the way I've learned tons of skills and grown my strengths as a designer and leader.</p>
 <p>Currently, I'm a Product Design Manager at <a href="https://clio.com">Clio</a>, where we make cloud-based legal software.</p>
 
 <h2>Timeline</h2>
